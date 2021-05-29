@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <title>DevFolio</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -8,10 +9,22 @@
 </head>
 
 <body>
-
+    <section id="loading">
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </section>
+    <div class="btn-up">
+        <button id="btnUp" class="btn btn-secondary rounded-pill">
+            <i class="fas fa-arrow-alt-circle-up"></i>
+        </button>
+    </div>
     <!-- Navbar -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark back-a w-100 position-fixed">
+    <nav class="navbar navbar-expand-lg navbar-dark back-a w-100 position-fixed" id="main-nav">
         <div class="container">
             <a class="navbar-brand text-30 text-weight-600" href="#">DevFolio</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -699,7 +712,7 @@
     </footer>
 
     <!-- End footer -->
-    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>

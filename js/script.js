@@ -51,3 +51,35 @@ document.addEventListener("keydown", function (e) {
         closeSlide();
     }
 })
+let offsetAbout = $("#about").offset().top;
+console.log(offsetAbout);
+
+$(window).scroll(function () {
+    let wScroll = $(window).scrollTop();
+    console.log(wScroll);
+    if (wScroll > offsetAbout - 50) {
+        $("#main-nav").css("backgroundColor", "rgba(0,0,0,0.7)");
+        $("#btnUp").fadeIn(500);
+    } else {
+        $("#main-nav").css("backgroundColor", "transparent");
+        $("#btnUp").fadeOut(500);
+
+
+    }
+});
+
+$("#btnUp").click(function () {
+    $(`html , body`).animate({ scrollTop: 0 }, 2000);
+
+});
+
+$("a[href^='#']").click(function () {
+    let hrefLink = $(this).attr("href");
+    let offsetSection = $(hrefLink).offset().top;
+    $("html,body").animate({ scrollTop: offsetSection }, 2000);
+})
+window.onload = function () {
+    $("#loading").fadeOut(1000, function () {
+        $("body").css("overflow", "auto")
+    })
+}
