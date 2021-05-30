@@ -80,6 +80,7 @@ $("a[href^='#']").click(function () {
 })
 window.onload = function () {
     $("#loading").fadeOut(1000, function () {
+        $("#loading").css("display", "none");
         $("body").css("overflow", "auto")
     })
 }

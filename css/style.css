@@ -25,6 +25,9 @@ body{
       bottom: 0;
       z-index: 999999999999;
       background-color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
   .spinner {
       width: 40px;
